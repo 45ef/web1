@@ -68,14 +68,15 @@ $.ajax({
         data: $('#form_login').serialize(),
          success: (res) => {
             if(res.status !==0){
-        return layer.msg(res.message)
+        return layer.msg(res.message),
       
-    }
-    layer.msg("登录成功！")
-  localStorage.setItem('token',res.token)
+    
+    layer.msg("登录成功！"),
+  localStorage.setItem('token',res.token),
   //跳转到后台主页
   location.href ='/index.html'
 }
+         }
 })
 })
 })
